@@ -25,7 +25,9 @@ class AppMenu: NSMenu {
     }
     
     private func addCustomItem() {
-        let actionTypes: [AppActionable.Type] = [AppShowInFinderAction.self,
+        let actionTypes: [AppActionable.Type] = [AppOpenDatabaseAction.self,
+                                                 AppOpenMetadataAction.self,
+                                                 AppShowInFinderAction.self,
                                                  AppLaunchAction.self,
                                                  AppResetAction.self,
                                                  AppTerminateAction.self,
@@ -139,6 +141,56 @@ class AppShowInFinderAction: AppActionable {
             NSWorkspace.shared.open(url)
         }
     }
+    var isAvailable: Bool = true
+    var icon: NSImage?
+}
+
+class AppOpenMetadataAction: AppActionable {
+    var app: Application
+    required init(_ app: Application) {
+        self.app = app
+    }
+    var title: String = "Open metadata folder"
+    
+    @objc func perform() {
+        if var url = app.linkURL{
+            url.appendPathComponent("Sandbox")
+            url.appendPathComponent("Documents")
+
+            if let metadataURL = FileManager.default.searchFile(with: "sobjects.json", inFolder: url) {
+                url = metadataURL
+                url.deleteLastPathComponent()
+            }
+           
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    var isAvailable: Bool = true
+    var icon: NSImage?
+}
+
+class AppOpenDatabaseAction: AppActionable {
+    var app: Application
+    required init(_ app: Application) {
+        self.app = app
+    }
+    var title: String = "Open database"
+    
+    @objc func perform() {
+        if var url = app.linkURL{
+            url.appendPathComponent("Sandbox")
+            url.appendPathComponent("Documents")
+            url.appendPathComponent(".Data")
+            
+            if let dbURL = FileManager.default.searchFile(with: "OCE.db", inFolder: url) {
+               url = dbURL
+            }
+            
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
     var isAvailable: Bool = true
     var icon: NSImage?
 }

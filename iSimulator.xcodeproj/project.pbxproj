@@ -46,6 +46,7 @@
 		319833E021A94EDF004ADEE3 /* CrashlyticsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319833DF21A94EDF004ADEE3 /* CrashlyticsReport.swift */; };
 		31CD6D0221B2817900E49DC0 /* RootLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD6D0121B2817900E49DC0 /* RootLink.swift */; };
 		31CD6D0421B2942300E49DC0 /* ApplicationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD6D0321B2942300E49DC0 /* ApplicationCache.swift */; };
+		C9B2450C240FDDFC00941A56 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2450B240FDDFC00941A56 /* FileManager+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +104,7 @@
 		319833DF21A94EDF004ADEE3 /* CrashlyticsReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashlyticsReport.swift; sourceTree = "<group>"; };
 		31CD6D0121B2817900E49DC0 /* RootLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootLink.swift; sourceTree = "<group>"; };
 		31CD6D0321B2942300E49DC0 /* ApplicationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCache.swift; sourceTree = "<group>"; };
+		C9B2450B240FDDFC00941A56 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				298B2DB61F5549B200D73AFA /* SKQueue.swift */,
 				29B591971F581513006CDEC0 /* FileWatch.swift */,
 				319833DF21A94EDF004ADEE3 /* CrashlyticsReport.swift */,
+				C9B2450B240FDDFC00941A56 /* FileManager+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				29B227BA1FBD7B9F00BDE5BF /* PreferencesViewController.swift in Sources */,
 				298B2DB71F5549B200D73AFA /* SKQueue.swift in Sources */,
 				319833E021A94EDF004ADEE3 /* CrashlyticsReport.swift in Sources */,
+				C9B2450C240FDDFC00941A56 /* FileManager+Extension.swift in Sources */,
 				29157C5E1F4D66220069BDB6 /* Device.swift in Sources */,
 				291157AE1FB5501C000EE94F /* DevcieMenuItem.swift in Sources */,
 				31CD6D0421B2942300E49DC0 /* ApplicationCache.swift in Sources */,
